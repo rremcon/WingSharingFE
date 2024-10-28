@@ -1,0 +1,40 @@
+/*------------------------ HOME -----------------------*/
+
+.wingsharing-button {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1b1a1a;
+    background: var(--green);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.wingsharing-button:hover {
+    background-color: var(--purple);
+}
+
+
+/*------- ROTATING LOGO BIG ----------------*/
+
+
+.App-logo-big {
+    height: 80vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo-big {
+        animation: App-logo-big-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-big-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

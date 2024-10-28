@@ -1,0 +1,26 @@
+
+.grid-service-tile {
+    /*De tegel moet in de basis 480 breed zijn*/
+    /*flex-basis: 384px;*/
+    flex-basis: 480px;
+    /*Als er meer ruimte is, mag hij NIET groter worden*/
+    flex-grow: 0;
+    /*Als er minder ruimte is, krimpt hij 1 fractie (dus alle tegels evenveel) van de ingeleverde ruimte*/
+    flex-shrink: 1;
+    /*Deze tegel is op zijn beurt weer een flexbox-container */
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 10px;
+    /*background-color: var(--blue);*/
+    /*border: 2px solid #c6572f;*/
+    border-radius: 40px;
+    box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.2);
+    /*color: #617d98;*/
+    font-size: 16px;
+}
+
+.service-tile__icon {
+    /*width: 100%;*/
+    border-radius: 100px;
+}
