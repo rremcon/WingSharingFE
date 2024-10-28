@@ -8,8 +8,8 @@ import {useNavigate} from "react-router-dom";
 
 function PlaceTicket(props) {
 
-    const navigate = useNavigate();
-    const [id, setId] = useState("");
+    // const navigate = useNavigate();
+    // const [id, setId] = useState("");
     const [category, setCategory] = useState("");
     const [airline, setAirline] = useState("");
     const [flightNumber, setFlightNumber] = useState('');
@@ -18,8 +18,8 @@ function PlaceTicket(props) {
     const [arrival, setArrival] = useState('');
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const [price, setPrice] = useState("");
-    const [availableplaces, setAvailableplaces] = useState("");
+    // const [price, setPrice] = useState("");
+    // const [availableplaces, setAvailableplaces] = useState("");
     const [confirm, setConfirm] = useState(false);
     const [errormessage, setErrorMessage] = useState(null)
     const token = localStorage.getItem('token');
@@ -38,7 +38,7 @@ function PlaceTicket(props) {
         try{
             // const response = await axios.post(`http://digizorgerbackend.azurewebsites.net/activities`, {
             const response = await axios.post(`http://localhost:8080/activities`, {
-                    id: id,
+                    // id: id,
                     category: category,
                     date: date,
                     time: time,
@@ -47,8 +47,8 @@ function PlaceTicket(props) {
                     flightnumber: flightNumber,
                     seatnumber: seatNumber,
 
-                    price: price,
-                    availableplaces: availableplaces,
+                    // price: price,
+                    // availableplaces: availableplaces,
                 },
 
                 {

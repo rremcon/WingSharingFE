@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import LogoRotating from "../components/Logo/LogoRotating";
 import logo from "../assets/wingsharing-propellor-640x480.png";
-import {useNavigate} from "react-router-dom";
+// import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import Button from "../components/Button/Button";
 
 
 function AirTaxi(props) {
 
-    const navigate = useNavigate();
-    const [id, setId] = useState("");
+    // const navigate = useNavigate();
+    // const [id, setId] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [airport, setAirport] = useState('');
@@ -35,7 +35,7 @@ function AirTaxi(props) {
         try{
             // const response = await axios.post(`http://digizorgerbackend.azurewebsites.net/activities`, {
             const response = await axios.post(`http://localhost:8080/activities`, {
-                    id: id,
+                    // id: id,
                     date: date,
                     time: time,
                     airport: airport,

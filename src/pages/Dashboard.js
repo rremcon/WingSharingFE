@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/wingsharing-propellor-640x480.png';
 import airtaxi from '../assets/airtaxi.png';
 import seat from '../assets/seat.png';
-import ticket from '../assets/ticket.png';
+// import ticket from '../assets/ticket.png';
 import ticket1 from '../assets/ticket1.png';
 import suitcase from '../assets/suitcase.png';
 import assistance from '../assets/assistance.png';
@@ -16,7 +16,7 @@ import '../components/Button/Button.css'
 
 function Dashboard(props) {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
 

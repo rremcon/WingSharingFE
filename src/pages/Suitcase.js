@@ -9,23 +9,23 @@ import '../components/Button/Button.css'
 
 function Suitcase(props) {
 
-    const navigate = useNavigate();
-    const [id, setId] = useState("");
+    // const navigate = useNavigate();
+    // const [id, setId] = useState("");
     const [telephoneNumber, setTelephoneNumber] = useState('');
     const [confirm, setConfirm] = useState(false);
-    const [errormessage, setErrorMessage] = useState(null)
+    // const [errormessage, setErrorMessage] = useState(null)
     const token = localStorage.getItem('token');
 
 
     async function trackSuitcase(e) {
         // voorkom refresh
         e.preventDefault();
-        setErrorMessage(null)
+        // setErrorMessage(null)
 
         try {
             // Verstuur de data in een object en zorg dat de keys overeenkomen met die in de backend
             const response = await axios.post('http://localhost:8080/mobility', {
-                    id: id,
+                    // id: id,
                     telephoneNumber: telephoneNumber,
                 },
 

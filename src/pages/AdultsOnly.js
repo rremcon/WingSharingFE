@@ -2,8 +2,8 @@ import React from 'react';
 import LogoRotating from "../components/Logo/LogoRotating";
 import logo from "../assets/wingsharing-propellor-640x480.png";
 import Button from "../components/Button/Button";
-import plane1 from '../assets/plane1.png';
-import Service from "../components/Service/Service";
+// import plane1 from '../assets/plane1.png';
+// import Service from "../components/Service/Service";
 
 function AdultsOnly(props) {
     return (
