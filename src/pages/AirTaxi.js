@@ -106,11 +106,11 @@ function AirTaxi(props) {
                                     value={airport}
                                     onChange={(e) => setAirport(e.target.value)}
                                 >
+                                    <option value="DWC">
+                                        DWC Dubai
+                                    </option>
                                     <option value="DXB">
                                         DXB Dubai
-                                    </option>
-                                    <option value="AMS">
-                                        AMS Amsterdam
                                     </option>
                                 </select>
                             </label>

@@ -101,10 +101,10 @@ function PlaceTicket(props) {
                                         Emirates
                                     </option>
                                     <option value="ProjectBasis">
-                                        KLM
+                                        Fly Dubai
                                     </option>
                                     <option value="ProjectBasis">
-                                        Aer Lingus
+                                        Lufthansa
                                     </option>
                                 </select>
                             </label>
@@ -158,11 +158,11 @@ function PlaceTicket(props) {
                                     value={departure}
                                     onChange={(e) => setDeparture(e.target.value)}
                                 >
+                                    <option value="DWC">
+                                        DWC Dubai
+                                    </option>
                                     <option value="DXB">
                                         DXB Dubai
-                                    </option>
-                                    <option value="AMS">
-                                        AMS Amsterdam
                                     </option>
                                 </select>
                             </label>
@@ -178,11 +178,11 @@ function PlaceTicket(props) {
                                     value={arrival}
                                     onChange={(e) => setArrival(e.target.value)}
                                 >
+                                    <option value="DWC">
+                                        DWC Dubai
+                                    </option>
                                     <option value="DXB">
                                         DXB Dubai
-                                    </option>
-                                    <option value="AMS">
-                                        AMS Amsterdam
                                     </option>
                                 </select>
                             </label>
