@@ -14,47 +14,12 @@ const CommunityFeed = () => {
     const [index, setIndex] = React.useState(0);
 
     const [posts, setPosts] = useState([]);
-    const FACEBOOK_PAGE_ID = "100064477762886";  // Vervang door jouw FACEBOOK-pagina-ID
-    const ACCESS_TOKEN_FACEBOOK = "EAAJMYBAfLfkBO1AVEBf1T3K12HDwLVx3vTzzXaDxKEZCYiA9S8tqgZC9uiZAZCrf0VQhOwhnKXwb8hpAqlD99ClkzoCso8P6XJMjD1XEu3nRNlTXonJEZBp1jWnZCsNqX3IcxqZBURPTUQG4VkSe0JFoaahm4bCz62tbke0cAijkg9ZCvMaI7P2UB9si5ZCYtWmvlIZBZAiBG4z0H5y4piB1Da1tcwiaV2FPWznTq5nOjoUXkFisQw9u2a5scR8uORbuZA7mJA3J4tBrZChAZD"; // Verkrijg facebook_access_token van Meta Graph API
+    const FACEBOOK_PAGE_ID = "";  // Vervang door jouw FACEBOOK-pagina-ID
+    const ACCESS_TOKEN_FACEBOOK = ""; // Verkrijg PAGE_access_token! van Meta Graph API
 
-    const INSTAGRAM_BUSINESS_ID = "jouw_instagram_business_id"; // Verkrijg via Graph API
-    const ACCESS_TOKEN_INSTAGRAM = "jouw_instagram_access_token";
-
-
-    useEffect(() => {
-            const fetchFacebookFeed = async () => {
-                try {
-                    const response = await axios.get(
-                        `https://graph.facebook.com/v17.0/${FACEBOOK_PAGE_ID}/posts?fields=message,created_time,full_picture,permalink_url&access_token=${ACCESS_TOKEN_FACEBOOK}`
-                    );
-                    setPosts(response.data.data);
-                } catch (error) {
-                    console.error("ERROR_Facebook-feed:", error);
-                }
-            };
-
-            fetchFacebookFeed();
-        }, []);
-
-
-
-
-        useEffect(() => {
-            const fetchInstagramFeed = async () => {
-                try {
-                    const response = await axios.get(
-                        `https://graph.facebook.com/v17.0/${INSTAGRAM_BUSINESS_ID}/media?fields=id,caption,media_url,permalink&access_token=${ACCESS_TOKEN_INSTAGRAM}`
-                    );
-                    setPosts(response.data.data);
-                } catch (error) {
-                    console.error("ERROR_Instagram-feed:", error);
-                }
-            };
-
-            fetchInstagramFeed();
-        }, []);
-
-
+    // const [posts, setPosts] = useState([]);
+    const INSTAGRAM_BUSINESS_ID = "instagram_business_id"; // Verkrijg via Graph API
+    const ACCESS_TOKEN_INSTAGRAM = "instagram_access_token"; //USER-ACCESS-TOKEN!
 
 
     useEffect(() => {
@@ -82,7 +47,37 @@ const CommunityFeed = () => {
 
 
 
+    useEffect(() => {
+            const fetchFacebookFeed = async () => {
+                try {
+                    const response = await axios.get(
+                        `https://graph.facebook.com/v17.0/${FACEBOOK_PAGE_ID}/posts?fields=message,created_time,full_picture,permalink_url&access_token=${ACCESS_TOKEN_FACEBOOK}`
+                    );
+                    setPosts(response.data.data);
+                } catch (error) {
+                    console.error("ERROR_Facebook-feed:", error);
+                }
+            };
 
+            fetchFacebookFeed();
+        }, []);
+
+
+
+        useEffect(() => {
+            const fetchInstagramFeed = async () => {
+                try {
+                    const response = await axios.get(
+                        `https://graph.facebook.com/v17.0/${INSTAGRAM_BUSINESS_ID}/media?fields=id,caption,media_url,permalink&access_token=${ACCESS_TOKEN_INSTAGRAM}`
+                    );
+                    setPosts(response.data.data);
+                } catch (error) {
+                    console.error("ERROR_Instagram-feed:", error);
+                }
+            };
+
+            fetchInstagramFeed();
+        }, []);
 
 
 
@@ -150,7 +145,7 @@ const CommunityFeed = () => {
                                     <p>{post.message}</p>
                                     {post.full_picture && <img src={post.full_picture} alt="Post" />}
                                     <a href={post.permalink_url} target="_blank" rel="noopener noreferrer">
-                                        Bekijk op Facebook
+                                        See it on Facebook
                                     </a>
                                 </li>
                             ))}
@@ -166,7 +161,7 @@ const CommunityFeed = () => {
                                     {post.caption && <p>{post.caption}</p>}
                                     <img src={post.media_url} alt="Instagram Post" />
                                     <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-                                        Bekijk op Instagram
+                                        See it on Instagram
                                     </a>
                                 </li>
                             ))}

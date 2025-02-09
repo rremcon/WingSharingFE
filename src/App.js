@@ -25,34 +25,33 @@ function App() {
 
   return (
 
-    <>
+      <>
+
+          <div className='top-navigation'>
+              <UserCircle/>
+          </div>
 
 
-        <div className='top-navigation'>
-            <UserCircle/>
-        </div>
+          <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/dashboard" element={<Dashboard/>}/>
+              <Route path="/dashboard/fly" element={<Fly/>}/>
+              <Route path="/dashboard/fly/air-taxi" element={<AirTaxi/>}/>
+              <Route path="/dashboard/fly/adults-only" element={<AdultsOnly/>}/>
+              <Route path="/dashboard/fly/private-jet" element={<PrivateJet/>}/>
+              <Route path="/dashboard/seat" element={<PlaceSeat/>}/>
+              <Route path="/dashboard/ticket" element={<PlaceTicket/>}/>
+              <Route path="/dashboard/suitcase" element={<Suitcase/>}/>
+              <Route path="/dashboard/assistance" element={<Assistance/>}/>
+              <Route path="/dashboard/community" element={<Community/>}/>
+              <Route path="/dashboard/shop" element={<Shop/>}/>
+              <Route path="/dashboard/shop/drones" element={<Shop/>}/>
+              <Route path="/dashboard/shop/suitcases" element={<Shop/>}/>
+              <Route path="/dashboard/shop/headphones" element={<Shop/>}/>
+              <Route path="/dashboard/marketplace" element={<MarketPlace/>}/>
+          </Routes>
 
-
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/dashboard" element={<Dashboard/>}/>
-            <Route path="/dashboard/fly" element={<Fly/>}/>
-            <Route path="/dashboard/fly/air-taxi" element={<AirTaxi/>}/>
-            <Route path="/dashboard/fly/adults-only" element={<AdultsOnly/>}/>
-            <Route path="/dashboard/fly/private-jet" element={<PrivateJet/>}/>
-            <Route path="/dashboard/seat" element={<PlaceSeat/>}/>
-            <Route path="/dashboard/ticket" element={<PlaceTicket/>}/>
-            <Route path="/dashboard/suitcase" element={<Suitcase/>}/>
-            <Route path="/dashboard/assistance" element={<Assistance/>}/>
-            <Route path="/dashboard/community" element={<Community/>}/>
-            <Route path="/dashboard/shop" element={<Shop/>}/>
-            <Route path="/dashboard/shop/drones" element={<Shop/>}/>
-            <Route path="/dashboard/shop/suitcases" element={<Shop/>}/>
-            <Route path="/dashboard/shop/headphones" element={<Shop/>}/>
-            <Route path="/dashboard/marketplace" element={<MarketPlace/>}/>
-        </Routes>
-
-    </>
+      </>
 
   );
 }
