@@ -100,7 +100,7 @@ const CommunityFeed = () => {
                         imgTitle="logo"
                     />
 
-                    <h1 className="page-title">Changing aviation together.</h1>
+                    <h1 className="page-title">Transforming aviation together.</h1>
 
                     <section className="section">
 

@@ -280,6 +280,10 @@ p {
   color: var(--green);
 }
 
+fb-like {
+  color: var(--purple);
+}
+
 .top-navigation {
   display: flex;
   flex-direction: row;
