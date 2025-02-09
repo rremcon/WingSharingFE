@@ -205,10 +205,10 @@ kunnen we dit doen met behulp van jumplinks: door een titel te voorzien van een 
         MEDIA QUERIES
  */
 
+
 /* ------------------------------- GLOBAL STYLES -------------------------------- */
 
 :root {
-
   --background-black: #282c34;
   --grey: #808080FF;
   --white: #ffffff;
@@ -275,6 +275,24 @@ p {
 
 /* ------------------------------- LAYOUT --------------------------------------- */
 
+
+.starting-slogan {
+  color: var(--green);
+}
+
+.top-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: var(--purple);
+  padding: 10px 0;
+  margin: 0 20px;
+}
+
+.top-navigation-icon:hover {
+  border-radius: 50%;
+  background-color: var(--grey);
+}
 
 /* --------------- REUSABLES ----------------------- */
 

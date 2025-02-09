@@ -2,11 +2,12 @@ import React from 'react';
 import logo from '../assets/wingsharing-propellor-640x480.png';
 import airtaxi from '../assets/airtaxi.png';
 import seat from '../assets/seat.png';
-// import ticket from '../assets/ticket.png';
+import ticket from '../assets/ticket.png';
 import ticket1 from '../assets/ticket1.png';
 import suitcase from '../assets/suitcase.png';
 import assistance from '../assets/assistance.png';
 import plane from '../assets/plane.png';
+import plane1 from '../assets/plane1.png';
 import {useNavigate} from "react-router-dom";
 import LogoRotating from "../components/Logo/LogoRotating";
 import Service from "../components/Service/Service";
@@ -36,9 +37,9 @@ function Dashboard(props) {
                     <div className="grid-service-container">
 
                         <Service
-                            link={`/dashboard/air-taxi`}
-                            img={airtaxi}
-                            children="Air Taxi"
+                            link={`/dashboard/fly`}
+                            img={plane1}
+                            children="Fly"
                         />
 
                         <Service
@@ -60,15 +61,27 @@ function Dashboard(props) {
                         />
 
                         <Service
-                            link={`/dashboard/adults-only`}
-                            img={plane}
-                            children="Fly Adults Only"
-                        />
-
-                        <Service
                             link={`/dashboard/assistance`}
                             img={assistance}
                             children="Assistance"
+                        />
+
+                        <Service
+                            link={`/dashboard/community`}
+                            img={logo}
+                            children="Community"
+                        />
+
+                        <Service
+                            link={`/dashboard/shop`}
+                            img={logo}
+                            children="Shop"
+                        />
+
+                        <Service
+                            link={`/dashboard/marketplace`}
+                            img={ticket}
+                            children="Marketplace"
                         />
 
                     </div>
@@ -80,5 +93,6 @@ function Dashboard(props) {
 
     );
 }
+
 
 export default Dashboard;

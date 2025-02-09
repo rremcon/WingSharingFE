@@ -13,6 +13,7 @@ function AirTaxi(props) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [airport, setAirport] = useState('');
+    const [charter, setCharter] = useState('');
     const [inhabitantSalutation, setInhabitantSalutation] = useState('*');
     const [lastname, setLastname] = useState('');
     const [passportNumber, setPassportNumber] = useState('');
@@ -39,6 +40,7 @@ function AirTaxi(props) {
                     date: date,
                     time: time,
                     airport: airport,
+                    charter: charter,
                     salutation: inhabitantSalutation,
                     lastname: email,
                 },
@@ -70,7 +72,7 @@ function AirTaxi(props) {
                         imgTitle="logo"
                     />
 
-                    <h1 className="page-title">Order your Air Taxi.</h1>
+                    <h1 className="page-title">Order your Private Jet.</h1>
 
                     <div className="form-container">
                         <form className="form" onSubmit={addTicket}>
@@ -135,6 +137,50 @@ function AirTaxi(props) {
                                     </option>
                                     <option value="YVR">
                                         YVR Vancouver
+                                    </option>
+                                </select>
+                            </label>
+
+                            <br/>
+
+                            <label htmlFor="charter">
+                                {/**Charter:*/}
+                                <select
+                                    type="text"
+                                    id="charter"
+                                    name="charter-field"
+                                    value={charter}
+                                    onChange={(e) => setCharter(e.target.value)}
+                                >
+                                    <option value="CH1">
+                                        CH1
+                                    </option>
+                                    <option value="CH2">
+                                        CH2
+                                    </option>
+                                    <option value="CH3">
+                                        CH3
+                                    </option>
+                                    <option value="CH4">
+                                        CH4
+                                    </option>
+                                    <option value="CH5">
+                                        CH5
+                                    </option>
+                                    <option value="CH6">
+                                        CH6
+                                    </option>
+                                    <option value="CH7">
+                                        CH7
+                                    </option>
+                                    <option value="ASL">
+                                        Asl Group
+                                    </option>
+                                    <option value="JETEX">
+                                        Jetex
+                                    </option>
+                                    <option value="VILLIERS">
+                                        Villiers
                                     </option>
                                 </select>
                             </label>
@@ -211,7 +257,7 @@ function AirTaxi(props) {
                             className="select-button"
                             type="submit"
                             onClick={addTicket}
-                        >Order Air Taxi
+                        >Order Private Jet
                             {confirm === true && <p>Order Placed!</p>}
                         </Button>
 

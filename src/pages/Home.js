@@ -29,6 +29,8 @@ function Home() {
                         WingSharing
                     </Button>
 
+                    <h6 className="starting-slogan">Transforming aviation together.</h6>
+
                 </div>
             </header>
 
