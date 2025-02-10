@@ -48,7 +48,7 @@ function Donate(props) {
 
                         <Service
                             link={`/dashboard/donation/paypal`}
-                            img={UserCircle}
+                            img={<UserCircle/>}
                             // img=<UserCircle />
                             children="PayPal"
                         />
