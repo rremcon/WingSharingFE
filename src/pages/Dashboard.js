@@ -8,7 +8,7 @@ import suitcase from '../assets/suitcase.png';
 import assistance from '../assets/assistance.png';
 import plane from '../assets/plane.png';
 import plane1 from '../assets/plane1.png';
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import LogoRotating from "../components/Logo/LogoRotating";
 import Service from "../components/Service/Service";
 import '../components/Service/Service.css'
@@ -32,26 +32,44 @@ function Dashboard(props) {
                         imgTitle="logo"
                     />
 
-                    <h1 className="page-title">Dashboard</h1>
+                    <h1 className="page-title">Transforming aviation together.</h1>
 
                     <div className="grid-service-container">
 
                         <Service
-                            link={`/dashboard/fly`}
-                            img={plane1}
-                            children="Fly"
+                            link={`/dashboard/fly/flights`}
+                            img={plane}
+                            children="Flights"
                         />
 
                         <Service
-                            link={`/dashboard/seat`}
+                            link={`/dashboard/fly/private-jet`}
+                            img={plane1}
+                            children="Private Jet"
+                        />
+
+                        <Service
+                            link={`/dashboard/fly/air-taxi`}
+                            img={airtaxi}
+                            children="Air Taxi"
+                        />
+
+                        <Service
+                            link={`/dashboard/fly/adults-only`}
                             img={seat}
-                            children="Place Seat"
+                            children="Adults Only"
                         />
 
                         <Service
                             link={`/dashboard/ticket`}
                             img={ticket1}
                             children="Place Ticket"
+                        />
+
+                        <Service
+                            link={`/dashboard/marketplace`}
+                            img={ticket}
+                            children="Marketplace"
                         />
 
                         <Service
@@ -73,21 +91,53 @@ function Dashboard(props) {
                         />
 
                         <Service
-                            link={`/dashboard/shop`}
+                            link={`/dashboard/products`}
                             img={logo}
-                            children="Shop"
+                            children="Products"
                         />
 
                         <Service
-                            link={`/dashboard/marketplace`}
-                            img={ticket}
-                            children="Marketplace"
+                            link={`/dashboard/donation`}
+                            img={logo}
+                            children="Donate"
                         />
+
+                        <Service
+                            link={`/dashboard/payment-checkout`}
+                            img={logo}
+                            children="Payment Checkout"
+                        />
+
+
+                        {/*<Service*/}
+                        {/*    link={`/dashboard/fly`}*/}
+                        {/*    img={plane1}*/}
+                        {/*    children="Fly"*/}
+                        {/*/>*/}
+
+
+                        {/*<Service*/}
+                        {/*    link={`/dashboard/seat`}*/}
+                        {/*    img={seat}*/}
+                        {/*    children="Place Seat"*/}
+                        {/*/>*/}
+
 
                     </div>
 
                 </div>
             </main>
+
+
+            <footer id="footer" className="outer-content-container">
+                <div className="inner-content-container">
+                    <div className="footer-links">
+                        <Link className="about-us" to="/about-us">About Us</Link>
+                        <br/>
+                        <Link className="privacy-policy" to="/privacy">Privacy</Link>
+                    </div>
+                </div>
+            </footer>
 
         </>
 

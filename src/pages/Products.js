@@ -10,7 +10,7 @@ import plane from "../assets/plane.png";
 import assistance from "../assets/assistance.png";
 
 
-function Shop(props) {
+function Products(props) {
 
     return (
 
@@ -25,24 +25,24 @@ function Shop(props) {
                         imgTitle="logo"
                     />
 
-                    <h1 className="page-title">Shop</h1>
+                    <h1 className="page-title">Products</h1>
 
                     <div className="grid-service-container">
 
                         <Service
-                            link={`/dashboard/shop/drones`}
+                            link={`/dashboard/products/drones`}
                             img={airtaxi}
                             children="Drones"
                         />
 
                         <Service
-                            link={`/dashboard/shop/suitcases`}
+                            link={`/dashboard/products/suitcases`}
                             img={suitcase}
                             children="Suitcases"
                         />
 
                         <Service
-                            link={`/dashboard/shop/headphones`}
+                            link={`/dashboard/products/headphones`}
                             img={assistance}
                             children="Headphones"
                         />
@@ -58,4 +58,4 @@ function Shop(props) {
     );
 }
 
-export default Shop;
+export default Products;

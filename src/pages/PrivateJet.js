@@ -4,9 +4,10 @@ import logo from "../assets/wingsharing-propellor-640x480.png";
 // import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import Button from "../components/Button/Button";
+import Service from "../components/Service/Service";
 
 
-function AirTaxi(props) {
+function PrivateJet(props) {
 
     // const navigate = useNavigate();
     // const [id, setId] = useState("");
@@ -74,194 +75,273 @@ function AirTaxi(props) {
 
                     <h1 className="page-title">Order your Private Jet.</h1>
 
-                    <div className="form-container">
-                        <form className="form" onSubmit={addTicket}>
 
-                            {/*<h1 className="form-title">Activiteit toevoegen</h1>*/}
-                            <br/>
+                    <div className="grid-service-container">
 
-                            <div>{errormessage}</div>
-                            <input
-                                type="date"
-                                id="date-field"
-                                value={date}
-                                onChange={(e) => setDate(e.target.value)}
-                                name="date"
-                                placeholder="datum (yyyy-mm-dd)"/>
-                            <br/>
-                            <input
-                                type="time"
-                                id="time-field"
-                                value={time}
-                                onChange={(e) => setTime(e.target.value)}
-                                name="time"
-                                placeholder="tijdstip"/>
-                            <br/>
-                            {/*<br/>*/}
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Fly Victor"
+                        />
 
-                            <label htmlFor="airport">
-                                {/**Airport:*/}
-                                <select
-                                    type="text"
-                                    id="airport"
-                                    name="airport-field"
-                                    value={airport}
-                                    onChange={(e) => setAirport(e.target.value)}
-                                >
-                                    <option value="ATH">
-                                        ATH Athens
-                                    </option>
-                                    <option value="DFW">
-                                        DFW Dallas Fort Worth
-                                    </option>
-                                    <option value="DWC">
-                                        DWC Dubai
-                                    </option>
-                                    <option value="DXB">
-                                        DXB Dubai
-                                    </option>
-                                    <option value="MUC">
-                                        MUC Munich
-                                    </option>
-                                    <option value="MCT">
-                                        MCT Muscat
-                                    </option>
-                                    <option value="NRT">
-                                        NRT Narita
-                                    </option>
-                                    <option value="NCE">
-                                        NCE Nice
-                                    </option>
-                                    <option value="FCO">
-                                        FCO Rome
-                                    </option>
-                                    <option value="YVR">
-                                        YVR Vancouver
-                                    </option>
-                                </select>
-                            </label>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Fly XO"
+                        />
 
-                            <br/>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Air Charter Services"
+                        />
 
-                            <label htmlFor="charter">
-                                {/**Charter:*/}
-                                <select
-                                    type="text"
-                                    id="charter"
-                                    name="charter-field"
-                                    value={charter}
-                                    onChange={(e) => setCharter(e.target.value)}
-                                >
-                                    <option value="CH1">
-                                        CH1
-                                    </option>
-                                    <option value="CH2">
-                                        CH2
-                                    </option>
-                                    <option value="CH3">
-                                        CH3
-                                    </option>
-                                    <option value="CH4">
-                                        CH4
-                                    </option>
-                                    <option value="CH5">
-                                        CH5
-                                    </option>
-                                    <option value="CH6">
-                                        CH6
-                                    </option>
-                                    <option value="CH7">
-                                        CH7
-                                    </option>
-                                    <option value="ASL">
-                                        Asl Group
-                                    </option>
-                                    <option value="JETEX">
-                                        Jetex
-                                    </option>
-                                    <option value="VILLIERS">
-                                        Villiers
-                                    </option>
-                                </select>
-                            </label>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Private Fly"
+                        />
 
-                            <br/>
-                            <br/>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Jettly"
+                        />
 
-                            <label htmlFor="inhabitant-salutation">
-                                *Salutation:
-                                <select
-                                    type="text"
-                                    id="inhabitant-salutation"
-                                    name="inhabitant-salutation-field"
-                                    value={inhabitantSalutation}
-                                    onChange={(e) => setInhabitantSalutation(e.target.value)}
-                                >
-                                    <option value="*">
-                                        *
-                                    </option>
-                                    <option value="Mr.">
-                                        Mr.
-                                    </option>
-                                    <option value="Mrs.">
-                                        Mrs.
-                                    </option>
-                                </select>
-                            </label>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Stratos Jets"
+                        />
 
-                            <br/>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Luxury Aircraft Solutions"
+                        />
 
-                            <label htmlFor="lastname">
-                                *Lastname:
-                                <input
-                                    type="text"
-                                    name="lastname-field"
-                                    id="lastname"
-                                    value={lastname}
-                                    onChange={(e) => setLastname(e.target.value)}
-                                />
-                            </label>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="JetSuite"
+                        />
 
-                            <br/>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="CharterJet"
+                        />
 
-                            <label htmlFor="email">
-                                *Email:
-                                <input
-                                    type="text"
-                                    name="email-field"
-                                    id="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </label>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="AirPartner"
+                        />
 
-                            <br/>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Villiers"
+                        />
 
-                            <label htmlFor="passportnumber">
-                                *PassportNr:
-                                <input
-                                    type="text"
-                                    name="passport-number-field"
-                                    id="passportnumber"
-                                    value={passportNumber}
-                                    onChange={(e) => setPassportNumber(e.target.value)}
-                                />
-                            </label>
-
-                            <br/>
-                            <br/>
-
-                        </form>
-
-                        <Button
-                            className="select-button"
-                            type="submit"
-                            onClick={addTicket}
-                        >Order Private Jet
-                            {confirm === true && <p>Order Placed!</p>}
-                        </Button>
+                        <Service
+                            link={`http://flyadultsonly.com/`}
+                            img={logo}
+                            children="Jetex"
+                        />
 
                     </div>
+
+
+
+                    {/*<div className="form-container">*/}
+                    {/*    <form className="form" onSubmit={addTicket}>*/}
+
+                    {/*        /!*<h1 className="form-title">Activiteit toevoegen</h1>*!/*/}
+                    {/*        <br/>*/}
+
+                    {/*        <div>{errormessage}</div>*/}
+                    {/*        <input*/}
+                    {/*            type="date"*/}
+                    {/*            id="date-field"*/}
+                    {/*            value={date}*/}
+                    {/*            onChange={(e) => setDate(e.target.value)}*/}
+                    {/*            name="date"*/}
+                    {/*            placeholder="datum (yyyy-mm-dd)"/>*/}
+                    {/*        <br/>*/}
+                    {/*        <input*/}
+                    {/*            type="time"*/}
+                    {/*            id="time-field"*/}
+                    {/*            value={time}*/}
+                    {/*            onChange={(e) => setTime(e.target.value)}*/}
+                    {/*            name="time"*/}
+                    {/*            placeholder="tijdstip"/>*/}
+                    {/*        <br/>*/}
+                    {/*        /!*<br/>*!/*/}
+
+                    {/*        <label htmlFor="airport">*/}
+                    {/*            /!**Airport:*!/*/}
+                    {/*            <select*/}
+                    {/*                type="text"*/}
+                    {/*                id="airport"*/}
+                    {/*                name="airport-field"*/}
+                    {/*                value={airport}*/}
+                    {/*                onChange={(e) => setAirport(e.target.value)}*/}
+                    {/*            >*/}
+                    {/*                <option value="ATH">*/}
+                    {/*                    ATH Athens*/}
+                    {/*                </option>*/}
+                    {/*                <option value="DFW">*/}
+                    {/*                    DFW Dallas Fort Worth*/}
+                    {/*                </option>*/}
+                    {/*                <option value="DWC">*/}
+                    {/*                    DWC Dubai*/}
+                    {/*                </option>*/}
+                    {/*                <option value="DXB">*/}
+                    {/*                    DXB Dubai*/}
+                    {/*                </option>*/}
+                    {/*                <option value="MUC">*/}
+                    {/*                    MUC Munich*/}
+                    {/*                </option>*/}
+                    {/*                <option value="MCT">*/}
+                    {/*                    MCT Muscat*/}
+                    {/*                </option>*/}
+                    {/*                <option value="NRT">*/}
+                    {/*                    NRT Narita*/}
+                    {/*                </option>*/}
+                    {/*                <option value="NCE">*/}
+                    {/*                    NCE Nice*/}
+                    {/*                </option>*/}
+                    {/*                <option value="FCO">*/}
+                    {/*                    FCO Rome*/}
+                    {/*                </option>*/}
+                    {/*                <option value="YVR">*/}
+                    {/*                    YVR Vancouver*/}
+                    {/*                </option>*/}
+                    {/*            </select>*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+
+                    {/*        <label htmlFor="charter">*/}
+                    {/*            /!**Charter:*!/*/}
+                    {/*            <select*/}
+                    {/*                type="text"*/}
+                    {/*                id="charter"*/}
+                    {/*                name="charter-field"*/}
+                    {/*                value={charter}*/}
+                    {/*                onChange={(e) => setCharter(e.target.value)}*/}
+                    {/*            >*/}
+                    {/*                <option value="CH1">*/}
+                    {/*                    CH1*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH2">*/}
+                    {/*                    CH2*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH3">*/}
+                    {/*                    CH3*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH4">*/}
+                    {/*                    CH4*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH5">*/}
+                    {/*                    CH5*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH6">*/}
+                    {/*                    CH6*/}
+                    {/*                </option>*/}
+                    {/*                <option value="CH7">*/}
+                    {/*                    CH7*/}
+                    {/*                </option>*/}
+                    {/*                <option value="ASL">*/}
+                    {/*                    Asl Group*/}
+                    {/*                </option>*/}
+                    {/*                <option value="JETEX">*/}
+                    {/*                    Jetex*/}
+                    {/*                </option>*/}
+                    {/*                <option value="VILLIERS">*/}
+                    {/*                    Villiers*/}
+                    {/*                </option>*/}
+                    {/*            </select>*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+                    {/*        <br/>*/}
+
+                    {/*        <label htmlFor="inhabitant-salutation">*/}
+                    {/*            *Salutation:*/}
+                    {/*            <select*/}
+                    {/*                type="text"*/}
+                    {/*                id="inhabitant-salutation"*/}
+                    {/*                name="inhabitant-salutation-field"*/}
+                    {/*                value={inhabitantSalutation}*/}
+                    {/*                onChange={(e) => setInhabitantSalutation(e.target.value)}*/}
+                    {/*            >*/}
+                    {/*                <option value="*">*/}
+                    {/*                    **/}
+                    {/*                </option>*/}
+                    {/*                <option value="Mr.">*/}
+                    {/*                    Mr.*/}
+                    {/*                </option>*/}
+                    {/*                <option value="Mrs.">*/}
+                    {/*                    Mrs.*/}
+                    {/*                </option>*/}
+                    {/*            </select>*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+
+                    {/*        <label htmlFor="lastname">*/}
+                    {/*            *Lastname:*/}
+                    {/*            <input*/}
+                    {/*                type="text"*/}
+                    {/*                name="lastname-field"*/}
+                    {/*                id="lastname"*/}
+                    {/*                value={lastname}*/}
+                    {/*                onChange={(e) => setLastname(e.target.value)}*/}
+                    {/*            />*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+
+                    {/*        <label htmlFor="email">*/}
+                    {/*            *Email:*/}
+                    {/*            <input*/}
+                    {/*                type="text"*/}
+                    {/*                name="email-field"*/}
+                    {/*                id="email"*/}
+                    {/*                value={email}*/}
+                    {/*                onChange={(e) => setEmail(e.target.value)}*/}
+                    {/*            />*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+
+                    {/*        <label htmlFor="passportnumber">*/}
+                    {/*            *PassportNr:*/}
+                    {/*            <input*/}
+                    {/*                type="text"*/}
+                    {/*                name="passport-number-field"*/}
+                    {/*                id="passportnumber"*/}
+                    {/*                value={passportNumber}*/}
+                    {/*                onChange={(e) => setPassportNumber(e.target.value)}*/}
+                    {/*            />*/}
+                    {/*        </label>*/}
+
+                    {/*        <br/>*/}
+                    {/*        <br/>*/}
+
+                    {/*    </form>*/}
+
+                    {/*    <Button*/}
+                    {/*        className="select-button"*/}
+                    {/*        type="submit"*/}
+                    {/*        onClick={addTicket}*/}
+                    {/*    >Order Private Jet*/}
+                    {/*        {confirm === true && <p>Order Placed!</p>}*/}
+                    {/*    </Button>*/}
+
+                    {/*</div>*/}
 
                 </div>
 
@@ -273,4 +353,4 @@ function AirTaxi(props) {
     );
 }
 
-export default AirTaxi;
+export default PrivateJet;

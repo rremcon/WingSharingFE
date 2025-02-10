@@ -300,6 +300,19 @@ p {
   background-color: var(--grey);
 }
 
+.footer-links {
+
+}
+
+.dashboard-link-footer,
+.about-us,
+.privacy-policy {
+  color: var(--grey);
+  font-size: 12px;
+}
+
+
+
 /* --------------- REUSABLES ----------------------- */
 
 /* De buitenste container is altijd de volledige schermbreedte.

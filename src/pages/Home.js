@@ -34,13 +34,6 @@ function Home() {
                 </div>
             </header>
 
-
-            <footer id="footer" className="outer-content-container">
-                <div className="inner-content-container">
-                    WingSharing &copy; 2025
-                </div>
-            </footer>
-
         </>
 
     );
