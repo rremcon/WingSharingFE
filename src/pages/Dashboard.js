@@ -96,18 +96,6 @@ function Dashboard(props) {
                             children="Products"
                         />
 
-                        <Service
-                            link={`/dashboard/donation`}
-                            img={logo}
-                            children="Donate"
-                        />
-
-                        <Service
-                            link={`/dashboard/payment-checkout`}
-                            img={logo}
-                            children="Payment Checkout"
-                        />
-
 
                         {/*<Service*/}
                         {/*    link={`/dashboard/fly`}*/}

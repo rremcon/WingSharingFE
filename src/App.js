@@ -15,20 +15,21 @@ import Community from "./pages/Community";
 import Products from "./pages/Products";
 import PrivateJet from "./pages/PrivateJet";
 import MarketPlace from "./pages/MarketPlace";
-import Fly from "./pages/Fly";
-import Donate from "./pages/Donate";
+// import Fly from "./pages/Fly";
+import PaymentPage from "./payments/PaymentPage";
 import Flights from "./pages/Flights";
 import Privacy from "./pages/Privacy";
 import AboutUs from "./pages/AboutUs";
 import Button from "./components/Button/Button";
 import {FaUserCircle,} from "react-icons/fa";
 
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import CheckoutForm from "./pages/CheckoutForm";
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import CheckoutForm from './payments/CheckoutForm';
+import PaymentHistory from "./payments/PaymentHistory";
+import PaymentDashboard from "./payments/PaymentDashboard";
+import PaymentSuccessPage from "./payments/PaymentSuccessPage";
 
-
-const stripePromise = loadStripe("pk_test_1234567890abcdef"); // Vervang met je Publishable Key
 
 const UserCircle = () => <FaUserCircle className='top-navigation-icon' size='32'/>;
 
@@ -40,13 +41,8 @@ function App() {
 
       <>
 
-          <Elements stripe={stripePromise}>
-              <CheckoutForm />
-          </Elements>
-
-
           <div className='top-navigation'>
-              <Link to="/dashboard/donation">
+              <Link to="/payment-checkout">
                   <Button
                       className="donate-button"
                       type="submit"
@@ -64,7 +60,7 @@ function App() {
               <Route path="/privacy" element={<Privacy/>}/>
               <Route path="/about-us" element={<AboutUs/>}/>
               <Route path="/dashboard" element={<Dashboard/>}/>
-              <Route path="/dashboard/fly" element={<Fly/>}/>
+              {/*<Route path="/dashboard/fly" element={<Fly/>}/>*/}
               <Route path="/dashboard/fly/flights" element={<Flights/>}/>
               <Route path="/dashboard/fly/private-jet" element={<PrivateJet/>}/>
               <Route path="/dashboard/fly/air-taxi" element={<AirTaxi/>}/>
@@ -79,8 +75,10 @@ function App() {
               <Route path="/dashboard/products/suitcases" element={<Products/>}/>
               <Route path="/dashboard/products/headphones" element={<Products/>}/>
               <Route path="/dashboard/marketplace" element={<MarketPlace/>}/>
-              <Route path="/dashboard/donation" element={<Donate/>}/>
-              <Route path="/dashboard/payment-checkout" element={<CheckoutForm/>}/>
+              <Route path="/payment-checkout" element={<PaymentPage/>}/>
+              <Route path="/payment-success" element={<PaymentSuccessPage/>}/>
+              <Route path="/payments-history" element={<PaymentHistory/>}/>
+              <Route path="/payments-dashboard" element={<PaymentDashboard/>}/>
           </Routes>
 
 

@@ -313,6 +313,24 @@ p {
 
 
 
+.stripe .error {
+  color: #c21313;
+  margin-top: 10px;
+}
+
+.stripe button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.stripe button:disabled {
+  background-color: var(--grey);
+}
+
 /* --------------- REUSABLES ----------------------- */
 
 /* De buitenste container is altijd de volledige schermbreedte.
